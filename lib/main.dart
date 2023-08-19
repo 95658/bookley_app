@@ -1,3 +1,4 @@
+import 'package:bookley_app/core/utils/AppColors/app_colors.dart';
 import 'package:bookley_app/features/Splash/presentation/view_model/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,9 @@ class BookleyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home : SplashView(),
+      debugShowCheckedModeBanner: false ,
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: AppColors.KcolorBackground),
+      home : const SplashView(),
     );
   }
 }
