@@ -1,5 +1,5 @@
+import 'package:bookley_app/core/utils/Styles/styles.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_app_bar.dart';
-import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_list_view_items.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/featured_bookds_list_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -9,11 +9,20 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        CustomAppBar(),
-        FeaturedBookdsListView()
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 17),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          CustomAppBar(),
+          FeaturedBookdsListView(),
+          SizedBox(height: 40,),
+          Text('Best Seller',
+          style: Styles.titleMedium,
+          ),
+
+        ],
+      ),
     );
   }
 }

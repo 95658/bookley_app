@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   animations:
   font_awesome_flutter:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
