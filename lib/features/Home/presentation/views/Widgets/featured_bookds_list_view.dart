@@ -1,0 +1,26 @@
+import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_app_bar.dart';
+import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_list_view_items.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+class FeaturedBookdsListView extends StatelessWidget {
+  const FeaturedBookdsListView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * .3,
+      child: ListView.builder(
+          scrollDirection : Axis.horizontal,
+          itemBuilder: (context , index){
+        return const Padding(
+          padding: EdgeInsets.only(top: 8.0 , left: 8.0),
+          child: FeaturedListViewItem(),
+        );
+      }),
+    );
+  }
+}
