@@ -1,0 +1,1 @@
+const KTranstionDuration = Duration(milliseconds: 250);

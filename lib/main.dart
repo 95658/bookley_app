@@ -1,7 +1,9 @@
 import 'package:bookley_app/core/utils/AppColors/app_colors.dart';
-import 'package:bookley_app/features/Splash/presentation/view_model/views/splash_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'features/Splash/presentation/views/splash_view.dart';
 
 
 
