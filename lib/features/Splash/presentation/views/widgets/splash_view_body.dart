@@ -1,5 +1,5 @@
-import 'package:bookley_app/core/utils/AppRouter/app_router.dart';
-import 'package:bookley_app/core/utils/pics&logos/app_images.dart';
+import 'package:bookley_app/core/utils/app_router.dart';
+import 'package:bookley_app/core/utils/app_images.dart';
 import 'package:bookley_app/features/Splash/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -41,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AppImages.Logo),
+        Image.asset(AppAssets.Logo),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );

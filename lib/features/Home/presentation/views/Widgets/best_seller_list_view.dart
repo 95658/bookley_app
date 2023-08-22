@@ -1,4 +1,4 @@
-import 'package:bookley_app/core/utils/Styles/styles.dart';
+import 'package:bookley_app/core/utils/styles.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/best_seller_list_view_item.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_app_bar.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/featured_bookds_list_view.dart';
@@ -13,6 +13,7 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       padding: EdgeInsets.zero,
       itemCount: 10,
         itemBuilder: (context , index ){

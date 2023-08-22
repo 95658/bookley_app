@@ -1,8 +1,8 @@
-import 'package:bookley_app/features/Home/presentation/views/book_details_view.dart';
+import 'package:bookley_app/features/Book_details/presentation/views/book_details_view.dart';
 import 'package:bookley_app/features/Home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../features/Splash/presentation/views/splash_view.dart';
+import '../../features/Splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter{
   static const KHomeView = '/homeView';

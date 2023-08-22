@@ -1,4 +1,5 @@
-import 'package:bookley_app/features/Home/presentation/views/Widgets/home_view_body.dart';
+import 'package:bookley_app/core/Widgets/no_app_bar.dart';
+import 'package:bookley_app/features/Home/presentation/views/Widgets/home_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,7 +8,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        body : HomeViewBody()
+        appBar: NoAppBar(),
+        body : HomeBody(),
     );
   }
 }

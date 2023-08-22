@@ -1,4 +1,4 @@
-import 'package:bookley_app/core/utils/constants/constants.dart';
+import 'package:bookley_app/core/utils/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 

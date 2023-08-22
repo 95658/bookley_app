@@ -1,4 +1,4 @@
-import 'package:bookley_app/core/utils/pics&logos/app_images.dart';
+import 'package:bookley_app/core/utils/app_images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class CustomBookImage extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(
-              AppImages.TestImage,
+              AppAssets.TestImage,
             ),
           ),
         ),

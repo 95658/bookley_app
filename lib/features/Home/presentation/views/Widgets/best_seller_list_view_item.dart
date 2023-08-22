@@ -1,7 +1,7 @@
-import 'package:bookley_app/core/utils/AppRouter/app_router.dart';
-import 'package:bookley_app/core/utils/Styles/styles.dart';
-import 'package:bookley_app/core/utils/constants/constants.dart';
-import 'package:bookley_app/core/utils/pics&logos/app_images.dart';
+import 'package:bookley_app/core/utils/app_router.dart';
+import 'package:bookley_app/core/utils/styles.dart';
+import 'package:bookley_app/core/utils/constants.dart';
+import 'package:bookley_app/core/utils/app_images.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/book_rating.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class BestSellerListViewItem extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage(
-                      AppImages.TestImage,
+                      AppAssets.TestImage,
                     ),
                   ),
                 ),
