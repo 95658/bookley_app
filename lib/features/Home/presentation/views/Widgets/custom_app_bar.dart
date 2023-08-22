@@ -4,23 +4,25 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    super.key,
+    super.key, required this.ontap,
   });
+
+  final VoidCallback ontap;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20, bottom: 35 , ),
-      child: Row(
-        children: [
-          Image.asset(
-            AppAssets.Logo,
-            height: 20,
-          ),
-         const Spacer(),
-          const Icon(FontAwesomeIcons.magnifyingGlass),
-        ],
-      ),
+    return Row(
+      children: [
+        Image.asset(
+          AppAssets.Logo,
+          height: 20,
+        ),
+        const Spacer(),
+        InkWell(
+          onTap: ontap,
+          child:  const Icon(FontAwesomeIcons.magnifyingGlass),
+        ),
+      ],
     );
   }
 }
