@@ -39,6 +39,7 @@ dependencies:
   font_awesome_flutter:
   google_fonts:
   go_router:
+  equatable:
 
 dev_dependencies:
   flutter_test:

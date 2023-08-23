@@ -1,5 +1,4 @@
 import 'package:bookley_app/core/utils/styles.dart';
-import 'package:bookley_app/features/Home/presentation/views/Widgets/best_seller_list_view.dart';
 import 'package:bookley_app/features/Search/presentions/views/widgets/search_result_list.dart';
 import 'package:flutter/material.dart';
 
