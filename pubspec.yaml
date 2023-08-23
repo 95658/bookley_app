@@ -40,6 +40,7 @@ dependencies:
   google_fonts:
   go_router:
   equatable:
+  dartz: 
 
 dev_dependencies:
   flutter_test:
