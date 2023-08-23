@@ -43,6 +43,8 @@ dependencies:
   dartz:
   dio:
   bloc:
+  get_it:
+  flutter_bloc:
 
 dev_dependencies:
   flutter_test:
