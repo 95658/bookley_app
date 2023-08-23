@@ -2,6 +2,7 @@ import 'VolumeInfo.dart';
 import 'SaleInfo.dart';
 import 'AccessInfo.dart';
 import 'SearchInfo.dart';
+import 'dart:convert';
 
 /// kind : "books#volume"
 /// id : "hM_tDwAAQBAJ"
@@ -12,8 +13,10 @@ import 'SearchInfo.dart';
 /// accessInfo : {"country":"EG","viewability":"PARTIAL","embeddable":true,"publicDomain":false,"textToSpeechPermission":"ALLOWED","epub":{"isAvailable":true,"acsTokenLink":"http://books.google.com.eg/books/download/Ideas_That_Created_the_Future-sample-epub.acsm?id=hM_tDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"},"pdf":{"isAvailable":true,"acsTokenLink":"http://books.google.com.eg/books/download/Ideas_That_Created_the_Future-sample-pdf.acsm?id=hM_tDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"},"webReaderLink":"http://play.google.com/books/reader?id=hM_tDwAAQBAJ&hl=&source=gbs_api","accessViewStatus":"SAMPLE","quoteSharingAllowed":false}
 /// searchInfo : {"textSnippet":"Each paper is accompanied by a brief essay by Harry Lewis, the volume&#39;s editor, offering historical and intellectual context."}
 
-class BookModel {
-  BookModel({
+Items itemsFromJson(String str) => Items.fromJson(json.decode(str));
+String itemsToJson(Items data) => json.encode(data.toJson());
+class Items {
+  Items({
       this.kind, 
       this.id, 
       this.etag, 
@@ -23,7 +26,7 @@ class BookModel {
       this.accessInfo, 
       this.searchInfo,});
 
-  BookModel.fromJson(dynamic json) {
+  Items.fromJson(dynamic json) {
     kind = json['kind'];
     id = json['id'];
     etag = json['etag'];
@@ -41,7 +44,23 @@ class BookModel {
   SaleInfo? saleInfo;
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
-
+Items copyWith({  String? kind,
+  String? id,
+  String? etag,
+  String? selfLink,
+  VolumeInfo? volumeInfo,
+  SaleInfo? saleInfo,
+  AccessInfo? accessInfo,
+  SearchInfo? searchInfo,
+}) => Items(  kind: kind ?? this.kind,
+  id: id ?? this.id,
+  etag: etag ?? this.etag,
+  selfLink: selfLink ?? this.selfLink,
+  volumeInfo: volumeInfo ?? this.volumeInfo,
+  saleInfo: saleInfo ?? this.saleInfo,
+  accessInfo: accessInfo ?? this.accessInfo,
+  searchInfo: searchInfo ?? this.searchInfo,
+);
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['kind'] = kind;

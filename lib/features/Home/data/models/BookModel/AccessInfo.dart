@@ -1,5 +1,6 @@
 import 'Epub.dart';
 import 'Pdf.dart';
+import 'dart:convert';
 
 /// country : "EG"
 /// viewability : "PARTIAL"
@@ -12,6 +13,8 @@ import 'Pdf.dart';
 /// accessViewStatus : "SAMPLE"
 /// quoteSharingAllowed : false
 
+AccessInfo accessInfoFromJson(String str) => AccessInfo.fromJson(json.decode(str));
+String accessInfoToJson(AccessInfo data) => json.encode(data.toJson());
 class AccessInfo {
   AccessInfo({
       this.country, 
@@ -47,7 +50,27 @@ class AccessInfo {
   String? webReaderLink;
   String? accessViewStatus;
   bool? quoteSharingAllowed;
-
+AccessInfo copyWith({  String? country,
+  String? viewability,
+  bool? embeddable,
+  bool? publicDomain,
+  String? textToSpeechPermission,
+  Epub? epub,
+  Pdf? pdf,
+  String? webReaderLink,
+  String? accessViewStatus,
+  bool? quoteSharingAllowed,
+}) => AccessInfo(  country: country ?? this.country,
+  viewability: viewability ?? this.viewability,
+  embeddable: embeddable ?? this.embeddable,
+  publicDomain: publicDomain ?? this.publicDomain,
+  textToSpeechPermission: textToSpeechPermission ?? this.textToSpeechPermission,
+  epub: epub ?? this.epub,
+  pdf: pdf ?? this.pdf,
+  webReaderLink: webReaderLink ?? this.webReaderLink,
+  accessViewStatus: accessViewStatus ?? this.accessViewStatus,
+  quoteSharingAllowed: quoteSharingAllowed ?? this.quoteSharingAllowed,
+);
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['country'] = country;
