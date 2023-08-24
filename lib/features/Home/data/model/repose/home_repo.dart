@@ -1,4 +1,4 @@
-import 'package:bookley_app/features/Home/data/models/BookModel/book_model.dart';
+import 'package:bookley_app/features/Home/data/model/BookModel/book_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../../../core/errs/failure.dart';

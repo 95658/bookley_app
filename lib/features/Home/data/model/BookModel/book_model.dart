@@ -1,5 +1,7 @@
-import 'package:bookley_app/features/Home/data/models/BookModel/sale_info.dart';
-import 'package:bookley_app/features/Home/data/models/BookModel/volume_info.dart';
+
+import 'package:bookley_app/features/Home/data/model/BookModel/sale_info.dart';
+import 'package:bookley_app/features/Home/data/model/BookModel/volume_info.dart';
+
 
 class BookModel{
   final String kind ;

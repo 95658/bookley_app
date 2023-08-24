@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:bookley_app/core/errs/failure.dart';
 import 'package:bookley_app/core/utils/api_services/api_services.dart';
-import 'package:bookley_app/features/Home/data/models/BookModel/book_model.dart';
-import 'package:bookley_app/features/Home/data/models/repose/home_repo.dart';
+import 'package:bookley_app/features/Home/data/model/BookModel/book_model.dart';
+import 'package:bookley_app/features/Home/data/model/repose/home_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 

@@ -1,7 +1,9 @@
-import 'package:bookley_app/features/Home/data/models/BookModel/image_links.dart';
+import 'package:bookley_app/features/Home/data/model/BookModel/image_links.dart';
 
 class VolumeInfo {
-  VolumeInfo({
+  VolumeInfo(
+
+      {
     required this.title,
     required this.subtitle,
     required this.authors,
@@ -22,6 +24,8 @@ class VolumeInfo {
   final String previewLink;
   final String infoLink;
 
+
+
   Map<String, dynamic> toJson() {
     return {
       'title': title,
@@ -33,6 +37,7 @@ class VolumeInfo {
       'language': language,
       'previewLink': previewLink,
       'infoLink': infoLink,
+
     };
   }
 
@@ -47,6 +52,7 @@ class VolumeInfo {
       language: json['language'] as String,
       previewLink: json['previewLink'] as String,
       infoLink: json['infoLink'] as String,
+
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookley_app/features/Home/data/models/BookModel/book_model.dart';
-import 'package:bookley_app/features/Home/data/models/repose/home_repo.dart';
+import 'package:bookley_app/features/Home/data/model/BookModel/book_model.dart';
+import 'package:bookley_app/features/Home/data/model/repose/home_repo.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 
