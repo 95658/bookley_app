@@ -1,6 +1,8 @@
+import 'dart:developer';
+
 import 'package:bookley_app/core/errs/failure.dart';
 import 'package:bookley_app/core/utils/api_services/api_services.dart';
-import 'package:bookley_app/features/Home/data/models/BookModel/Book_model.dart';
+import 'package:bookley_app/features/Home/data/models/BookModel/book_model.dart';
 import 'package:bookley_app/features/Home/data/models/repose/home_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -40,9 +42,10 @@ class HomeRepoImpl implements HomeRepo {
         books.add(BookModel.fromJson(item));
       }
       return right(books);
-    } catch (e) {
+    } catch (e,s) {
+      log(e.toString(), stackTrace: s);
       if (e is DioException) {
-        return left(ServerFailure.fromDioError(e));
+        return left(ServerFailure?.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
     }

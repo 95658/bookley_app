@@ -14,7 +14,9 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .17),
-          child: const CustomBookImage(),
+          child: const  CustomBookImage(
+            imageUrl: 'https://hips.hearstapps.com/hmg-prod/images/iphone-14-plus-09-1665072732.jpg?crop=0.585xw:0.781xh;0.162xw,0.118xh&resize=1200:*',
+          ),
         ),
         const SizedBox(
           height: 30,
