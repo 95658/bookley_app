@@ -24,7 +24,7 @@ class VolumeInfo {
   final String maturityRating;
   final ImageLinks? imageLinks;
   final String language;
-  final String previewLink;
+  final String? previewLink;
   final String infoLink;
 
   Map<String, dynamic> toJson() {
