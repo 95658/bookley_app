@@ -22,7 +22,7 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   void initState() {
-    BlocProvider.of<AlsoLikeCubit>(context).fetchAlsoLikeBooks(category: widget.bookModel.volumeInfo.categories[0] );
+    BlocProvider.of<AlsoLikeCubit>(context).fetchAlsoLikeBooks(category: widget.bookModel.volumeInfo.categories?[0]??'' );
     super.initState();
   }
 

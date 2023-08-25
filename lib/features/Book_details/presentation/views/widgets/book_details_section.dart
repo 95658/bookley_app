@@ -16,7 +16,7 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .17),
           child: CustomBookImage(
-            imageUrl: book.volumeInfo.imageLinks.thumbnail,
+            imageUrl: book.volumeInfo.imageLinks?.thumbnail?? '',
           ),
         ),
         const SizedBox(
@@ -26,16 +26,16 @@ class BookDetailsSection extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             book.volumeInfo.title,
-            style: Styles.TextStyle30.copyWith(fontWeight: FontWeight.bold),
+            style: Styles.TextStyle18.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(
-          height: 3,
+          height: 8,
         ),
         Opacity(
           opacity: .7,
           child: Text(
-            book.volumeInfo.authors[0],
+            book.volumeInfo.authors?[0]??'',
             style: Styles.TextStyle18.copyWith(
                 fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
           ),
@@ -43,13 +43,17 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 7,
         ),
-        const BookRating(
+         BookRating(
           mainAxisAlignment: MainAxisAlignment.center,
+           rating: book.volumeInfo.averageRating ?? 0,
+           count: book.volumeInfo.ratingsCount ?? 0,
         ),
         const SizedBox(
           height: 25,
         ),
-        const BooksAction(),
+         BooksAction(
+           bookModel: book,
+         ),
       ],
     );
   }

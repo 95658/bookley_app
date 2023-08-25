@@ -25,7 +25,7 @@ class BestSellerListViewItem extends StatelessWidget {
         height: 120,
         child: Row(
           children: [
-           CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks.thumbnail ),
+           CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail??''),
             const SizedBox(
               width: 30,
             ),
@@ -47,7 +47,7 @@ class BestSellerListViewItem extends StatelessWidget {
                     height: 3,
                   ),
                    Text(
-                    bookModel.volumeInfo.authors[0],
+                    bookModel.volumeInfo.authors?[0]??'',
                     style: Styles.TextStyle14,
                   ),
                   Row(
@@ -58,7 +58,10 @@ class BestSellerListViewItem extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                       const Spacer(),
-                      const BookRating(),
+                       BookRating(
+                         count: bookModel.volumeInfo.ratingsCount ?? 0,
+                         rating: bookModel.volumeInfo.averageRating ?? 0,
+                       ),
                     ],
                   ),
                 ],
