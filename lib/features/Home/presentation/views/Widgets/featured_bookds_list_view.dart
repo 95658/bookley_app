@@ -1,12 +1,14 @@
 import 'dart:developer';
 
 import 'package:bookley_app/core/Widgets/custom_error_msg.dart';
+import 'package:bookley_app/core/utils/app_router.dart';
 import 'package:bookley_app/features/Home/presentation/views/Widgets/custom_book_item.dart';
 import 'package:bookley_app/core/Widgets/loading_indecator.dart';
 import 'package:bookley_app/features/Home/presentation/views/management/FeaturedBooksCubit/featured_books_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FeaturedBookdsListView extends StatelessWidget {
   const FeaturedBookdsListView({
@@ -30,8 +32,15 @@ class FeaturedBookdsListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return  Padding(
                   padding: const EdgeInsets.only(top: 8.0),
-                  child: CustomBookImage(
-                    imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                  child: GestureDetector(
+                    onTap: (){
+                      GoRouter.of(context).push(AppRouter.KBookDetailsView,
+                        extra: state.books[index],
+                      );
+                    },
+                    child: CustomBookImage(
+                      imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   ),
                 );
               },
